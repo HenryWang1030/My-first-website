@@ -17,11 +17,11 @@
    <form action="{% url 'blog:home_page' %}" method="post">
    {% csrf_token %}
    <input type="text" placeholder="Please Enter Your username" name="username"><br><br>
-   <textarea placeholder="Please Enter Your Comment"></textarea><br>
+   <textarea name="comment" placeholder="Please Enter Your Comment"></textarea><br>
    <input type="submit" value="Post Me">
    </form>
 
   <h2>Comments</h2>
-   User{{username}} says: {{comment}}
+   User {{comment.user}} says: {{comment.comment}}
  </body>
  </html>
